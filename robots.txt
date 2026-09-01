@@ -1,0 +1,12 @@
+# ====================================================================
+# AKASH PORTFOLIO — WEB CRAWLER DIRECTIVES (robots.txt)
+# ====================================================================
+
+User-agent: *
+Allow: /
+
+# Disallow indexing of raw JSON data files
+Disallow: /data/
+
+# Sitemap Location
+Sitemap: https://dev-akashpandhre.github.io/Akash-Portfolio/sitemap.xml

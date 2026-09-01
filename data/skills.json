@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Python",
+    "category": "Programming & Data",
+    "icon": "fab fa-python",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "NumPy",
+    "category": "Programming & Data",
+    "icon": "fas fa-square-root-alt",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "Pandas",
+    "category": "Programming & Data",
+    "icon": "fas fa-table",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "Matplotlib & Seaborn",
+    "category": "Programming & Data",
+    "icon": "fas fa-chart-line",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "SQL",
+    "category": "Database",
+    "icon": "fas fa-database",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "Relational Databases",
+    "category": "Database",
+    "icon": "fas fa-server",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "HTML5 & CSS3",
+    "category": "Frontend",
+    "icon": "fab fa-html5",
+    "level": "Proficient"
+  },
+  {
+    "name": "JavaScript",
+    "category": "Frontend",
+    "icon": "fab fa-js",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "Flask",
+    "category": "Backend",
+    "icon": "fas fa-network-wired",
+    "level": "Learning"
+  },
+  {
+    "name": "Git & GitHub",
+    "category": "Tools",
+    "icon": "fab fa-git-alt",
+    "level": "Working Knowledge"
+  },
+  {
+    "name": "VS Code",
+    "category": "Tools",
+    "icon": "fas fa-laptop-code",
+    "level": "Proficient"
+  }
+]

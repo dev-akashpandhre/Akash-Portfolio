@@ -1,0 +1,320 @@
+/**
+ * ====================================================================
+ * AKASH PORTFOLIO — RESPONSIVE STYLESHEET (css/responsive.css)
+ * ====================================================================
+ * Media queries across Desktop, Laptop, Tablet, and Mobile viewports
+ * Breakpoint Grid: 1200px, 992px, 768px, 576px, 400px, 320px
+ */
+
+/* --------------------------------------------------------------------
+   1. LAPTOPS & MEDIUM DESKTOPS (<= 1200px)
+   -------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-name {
+        font-size: 3.2rem;
+    }
+
+    .profile-frame {
+        max-width: 440px;
+    }
+
+    .about-grid {
+        gap: 2.5rem;
+    }
+}
+
+/* --------------------------------------------------------------------
+   2. TABLETS & SMALL LAPTOPS (<= 992px)
+   -------------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .section {
+        padding: 4.5rem 0;
+    }
+
+    /* Mobile Hamburger Menu Drawer */
+    .nav-toggle {
+        display: flex;
+        z-index: 1002;
+    }
+
+    .nav-toggle.active .hamburger-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.active .hamburger-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .hamburger-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(320px, 80vw);
+        height: 100vh;
+        background: rgba(10, 11, 20, 0.95);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.15rem;
+        width: 100%;
+    }
+
+    /* Hero Section Collapsing */
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .hero-content {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-visual {
+        order: 1;
+    }
+
+    .profile-frame {
+        max-width: 420px;
+    }
+
+    .hero-role {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+    /* About Grid Collapsing */
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-visual {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .about-actions {
+        justify-content: center;
+    }
+
+    /* Contact Grid Collapsing */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Resume Banner */
+    .resume-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .resume-banner-actions {
+        justify-content: center;
+    }
+}
+
+/* --------------------------------------------------------------------
+   3. MOBILE PHONES (<= 768px)
+   -------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+        padding: 0 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-name {
+        font-size: 2.6rem;
+    }
+
+    .hero-role {
+        font-size: 1.3rem;
+    }
+
+    .profile-frame {
+        max-width: 360px;
+    }
+
+    .experience-badge {
+        bottom: -12px;
+        right: -5px;
+        padding: 0.5rem 0.85rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    /* GitHub Stats Grid */
+    .github-stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Timeline Adjustments */
+    .timeline {
+        padding-left: 2rem;
+    }
+
+    .timeline-dot {
+        left: -2rem;
+    }
+
+    .timeline-content {
+        padding: 1.25rem;
+    }
+
+    .timeline-degree {
+        font-size: 1.15rem;
+    }
+
+    /* Footer Mobile */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+/* --------------------------------------------------------------------
+   4. SMALL MOBILE DEVICES (<= 576px)
+   -------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .nav-resume-btn {
+        display: none;
+    }
+
+    .hero-name {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-role {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .profile-frame {
+        max-width: 310px;
+    }
+
+    .projects-grid,
+    .skills-grid,
+    .github-repos-grid,
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrap {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .resume-banner-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .resume-banner-actions .btn {
+        width: 100%;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --------------------------------------------------------------------
+   5. ULTRA-SMALL DEVICES (<= 380px)
+   -------------------------------------------------------------------- */
+@media screen and (max-width: 380px) {
+    .hero-name {
+        font-size: 1.85rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .profile-frame {
+        max-width: 270px;
+    }
+
+    .experience-badge {
+        display: none;
+    }
+} 

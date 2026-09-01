@@ -1,0 +1,35 @@
+[
+  {
+    "id": "student-performance-analysis",
+    "title": "Student Performance Analysis Using Python",
+    "description": "Complete Data Analysis Project exploring academic performance indicators and score trends using Python, NumPy, Pandas, Matplotlib, and Seaborn.",
+    "technologies": ["Python", "NumPy", "Pandas", "Matplotlib", "Seaborn"],
+    "image": "assets/images/projects/student-analysis.png",
+    "github": "https://github.com/dev-akashpandhre/-Student-Performance-Analysis-Using-Python",
+    "demo": "",
+    "featured": true,
+    "category": "Data Analysis"
+  },
+  {
+    "id": "smart-expense-tracker",
+    "title": "Smart Expense Tracker",
+    "description": "A smart web-based application designed to help users record, manage, categorize, and monitor daily expenses and income with authentication, budgets, dashboards, and financial reports.",
+    "technologies": ["Python", "Flask", "HTML", "CSS", "JavaScript", "SQL"],
+    "image": "assets/images/projects/github-project.png",
+    "github": "https://github.com/dev-akashpandhre",
+    "demo": "",
+    "featured": true,
+    "category": "Web Development"
+  },
+  {
+    "id": "sql-assignments",
+    "title": "SQL Assignments",
+    "description": "Solved SQL assignments demonstrating practical relational database querying, schema structuring, table joins, and record management.",
+    "technologies": ["SQL", "Relational Databases"],
+    "image": "assets/images/projects/sql-assignment.png",
+    "github": "https://github.com/dev-akashpandhre/SQL_Assignments_Akash",
+    "demo": "",
+    "featured": true,
+    "category": "Database"
+  }
+]

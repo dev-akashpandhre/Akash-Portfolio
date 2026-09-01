@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Akash Pandhre | B.Sc. Computer Science Student & Developer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Akash Pandhre — B.Sc. Computer Science student, Python & Data Analysis enthusiast, and Frontend Developer. Explore projects, skills, and coursework.">
+    <meta name="keywords" content="Akash Pandhre, Akash Kailas Pandhre, Portfolio, Computer Science, Python, Data Analysis, SQL, Web Development, SRTMUN, Parbhani">
+    <meta name="author" content="Akash Pandhre">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Akash Pandhre | Developer & Student Portfolio">
+    <meta property="og:description" content="Explore data analysis projects, web applications, SQL work, and technical skills by Akash Pandhre.">
+    <meta property="og:image" content="assets/images/profile.png">
+    
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akash Pandhre | Developer Portfolio">
+    <meta name="twitter:description" content="B.Sc. Computer Science student specializing in Python, Data Analysis, and Web Development.">
+    <meta name="twitter:image" content="assets/images/profile.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Core Layout Safety Rules -->
+    <style>
+        img { max-width: 100%; height: auto; }
+        .logo-img { height: 38px !important; width: auto !important; max-width: 48px; object-fit: contain; display: inline-block; vertical-align: middle; }
+        .nav-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+    </style>
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ====================================================================
+         1. PRELOADER SCREEN
+         ==================================================================== -->
+    <div id="preloader" class="loader-wrapper" aria-busy="true" aria-label="Loading Akash's Portfolio">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">
+                <span class="loader-title">Akash Pandhre</span>
+                <span class="loader-subtitle">Loading Portfolio...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" class="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <!-- ====================================================================
+         2. HEADER & NAVIGATION BAR
+         ==================================================================== -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="#hero" class="nav-logo" aria-label="Akash Pandhre Homepage">
+                <img src="assets/images/logo.png" alt="Akash Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">Akash<span>.</span></span>
+            </a>
+
+            <div id="nav-menu" class="nav-menu" role="menubar">
+                <a href="#hero" class="nav-link active" role="menuitem">Home</a>
+                <a href="#about" class="nav-link" role="menuitem">About</a>
+                <a href="#education" class="nav-link" role="menuitem">Education</a>
+                <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+                <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+                <a href="#certificates" class="nav-link" role="menuitem">Certificates</a>
+                <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle btn-icon" aria-label="Switch Theme" title="Switch Theme">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+
+                <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline nav-resume-btn">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i> Resume
+                </a>
+
+                <button id="nav-toggle" class="nav-toggle btn-icon" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- ====================================================================
+             3. HERO SECTION
+             ==================================================================== -->
+        <section id="hero" class="hero-section" style="background-image: url('assets/images/hero-bg.jpg');">
+            <canvas id="particles-canvas" class="particles-canvas"></canvas>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <span class="hero-greeting"><i class="fas fa-terminal"></i> Hello, I'm</span>
+                    <h1 class="hero-name">Akash Pandhre</h1>
+                    <h2 class="hero-role">
+                        <span id="typing-text" class="typed-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        B.Sc. Computer Science final-year student passionate about Python, Data Analysis, SQL, and Full-Stack Web Development. Focused on building practical applications and data-driven solutions.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code" aria-hidden="true"></i> View Projects
+                        </a>
+                        <a href="assets/resume/resume.pdf" download="Akash_Pandhre_Resume.pdf" class="btn btn-secondary">
+                            <i class="fas fa-download" aria-hidden="true"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/akash-pandhre-032a87420/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:akashpandhre84@gmail.com" class="social-link" aria-label="Send Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="profile-frame">
+                        <img src="assets/images/profile.png" alt="Akash Pandhre - Profile Portrait" class="profile-image" onerror="this.src='assets/images/about.png'">
+                        <div class="profile-glow"></div>
+                        <div class="experience-badge glass-card">
+                            <i class="fas fa-graduation-cap badge-icon"></i>
+                            <div class="badge-text">
+                                <strong>B.Sc. CS</strong>
+                                <span>Class of 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             4. ABOUT ME SECTION
+             ==================================================================== -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Get To Know Me</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-visual reveal">
+                        <div class="about-image-wrapper glass-card">
+                            <img src="assets/images/about.png" alt="Akash Pandhre studying and programming" class="about-img" onerror="this.src='assets/images/profile.png'">
+                        </div>
+                    </div>
+
+                    <div class="about-content reveal">
+                        <h3 class="about-heading">Passionate Computer Science Student & Aspiring Software Developer</h3>
+                        <p class="about-text">
+                            I am a final-year B.Sc. Computer Science student at <strong>Swami Ramanand Tirth Marathwada University, Nanded</strong>. I possess a strong foundation in computer science fundamentals and a keen interest in programming, data analysis, relational databases, and modern web application development.
+                        </p>
+                        <p class="about-text">
+                            My journey involves transforming theoretical knowledge into functional projects — ranging from exploratory data analysis using Python, NumPy, Pandas, Matplotlib, and Seaborn to full-stack web solutions powered by Flask, SQL, and JavaScript.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-item glass-card">
+                                <i class="fas fa-user-graduate highlight-icon"></i>
+                                <div>
+                                    <strong>Degree</strong>
+                                    <span>B.Sc. Computer Science</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item glass-card">
+                                <i class="fas fa-university highlight-icon"></i>
+                                <div>
+                                    <strong>University</strong>
+                                    <span>SRTMU, Nanded</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item glass-card">
+                                <i class="fas fa-laptop-code highlight-icon"></i>
+                                <div>
+                                    <strong>Core Focus</strong>
+                                    <span>Python & Web Development</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item glass-card">
+                                <i class="fas fa-map-marker-alt highlight-icon"></i>
+                                <div>
+                                    <strong>Location</strong>
+                                    <span>Maharashtra, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-actions">
+                            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                            <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i> View Full Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             5. EDUCATION SECTION
+             ==================================================================== -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Academic Milestones</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- B.Sc. Computer Science -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-period">2026 – Present (Pursuing)</span>
+                            <h3 class="timeline-degree">B.Sc. Computer Science — Final Year (TY)</h3>
+                            <h4 class="timeline-institution">Swami Ramanand Tirth Marathwada University, Nanded</h4>
+                            <p class="timeline-desc">
+                                Core coursework includes Data Structures, Relational Database Management Systems, Object-Oriented Programming, Operating Systems, Web Technologies, and Software Engineering.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- HSC -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-period">2023 – 2024</span>
+                            <h3 class="timeline-degree">Higher Secondary Certificate (HSC)</h3>
+                            <h4 class="timeline-institution">Swami Vivekanand Junior College, Chatori</h4>
+                            <p class="timeline-desc">
+                                Completed Higher Secondary Education with a focus on science and foundational mathematics.
+                            </p>
+                            <span class="grade-badge">Percentage: 73.00%</span>
+                        </div>
+                    </div>
+
+                    <!-- SSC -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-period">2020 – 2021</span>
+                            <h3 class="timeline-degree">Secondary School Certificate (SSC)</h3>
+                            <h4 class="timeline-institution">L.K.R.R Prince English School, Selu</h4>
+                            <p class="timeline-desc">
+                                Successfully completed secondary school education with academic distinction.
+                            </p>
+                            <span class="grade-badge">Percentage: 75.40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             6. SKILLS SECTION
+             ==================================================================== -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Technical Proficiency</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                </div>
+
+                <div id="skills-grid" class="skills-grid">
+                    <!-- Rendered dynamically by js/script.js via data/skills.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             7. FEATURED PROJECTS SECTION
+             ==================================================================== -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Portfolio Showcase</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <div id="featured-projects-grid" class="projects-grid">
+                    <!-- Rendered dynamically by js/script.js via data/projects.json -->
+                </div>
+
+                <div class="section-footer-cta reveal">
+                    <a href="pages/projects.html" class="btn btn-outline">
+                        View All Projects <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             8. GITHUB PROFILE & REPOSITORIES SECTION
+             ==================================================================== -->
+        <section id="github" class="section github-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Continuous Learning</span>
+                    <h2 class="section-title">GitHub Activity</h2>
+                </div>
+
+                <div id="github-stats" class="github-stats-container reveal">
+                    <!-- Populated dynamically by js/github.js -->
+                </div>
+
+                <div id="github-loader" class="github-loader" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i> Fetching latest GitHub repositories...
+                </div>
+
+                <div id="github-repos" class="github-repos-grid">
+                    <!-- Populated dynamically by js/github.js -->
+                </div>
+
+                <div class="section-footer-cta reveal">
+                    <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Visit GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             9. CERTIFICATES SECTION
+             ==================================================================== -->
+        <section id="certificates" class="section certificates-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Credentials & Training</span>
+                    <h2 class="section-title">Certifications</h2>
+                </div>
+
+                <div id="certificates-grid" class="certificates-grid">
+                    <!-- Rendered dynamically by js/script.js via data/certificates.json -->
+                </div>
+
+                <div class="section-footer-cta reveal">
+                    <a href="pages/certificates.html" class="btn btn-outline">
+                        View Certificates Page <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             10. RESUME DOWNLOAD SECTION
+             ==================================================================== -->
+        <section id="resume-section" class="section resume-section">
+            <div class="container">
+                <div class="resume-banner glass-card reveal">
+                    <div class="resume-banner-content">
+                        <h2 class="resume-banner-title">Looking for my full resume?</h2>
+                        <p class="resume-banner-text">
+                            Download a copy of my curriculum vitae detailing my academic journey, project implementations, technical skills, and coursework.
+                        </p>
+                    </div>
+                    <div class="resume-banner-actions">
+                        <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fas fa-eye"></i> View PDF
+                        </a>
+                        <a href="assets/resume/resume.pdf" download="Akash_Pandhre_Resume.pdf" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             11. CONTACT SECTION
+             ==================================================================== -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information Details -->
+                    <div class="contact-info-wrap reveal">
+                        <h3 class="contact-info-title">Let's talk about opportunities</h3>
+                        <p class="contact-info-desc">
+                            Feel free to reach out for project collaborations, technical discussions, or career opportunities.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-card glass-card">
+                                <i class="fas fa-envelope contact-card-icon"></i>
+                                <div>
+                                    <span class="contact-card-label">Email</span>
+                                    <a href="mailto:akashpandhre84@gmail.com" class="contact-card-value">akashpandhre84@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card glass-card">
+                                <i class="fab fa-linkedin-in contact-card-icon"></i>
+                                <div>
+                                    <span class="contact-card-label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/akash-pandhre-032a87420/" target="_blank" rel="noopener noreferrer" class="contact-card-value">in/akash-pandhre-032a87420</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card glass-card">
+                                <i class="fab fa-github contact-card-icon"></i>
+                                <div>
+                                    <span class="contact-card-label">GitHub</span>
+                                    <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer" class="contact-card-value">github.com/dev-akashpandhre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-wrap glass-card reveal">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry / Opportunity" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-input form-textarea" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+
+                            <div id="form-status" class="form-status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================================
+         12. FOOTER
+         ==================================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">Akash<span>.</span></span>
+                    <p class="footer-tagline">B.Sc. Computer Science Student & Developer Portfolio</p>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/akash-pandhre-032a87420/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:akashpandhre84@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Akash Pandhre. All rights reserved.</p>
+                <p class="footer-built">Designed & Built with HTML5, CSS3 & Vanilla JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================================================
+         13. FLOATING BACK TO TOP BUTTON
+         ==================================================================== -->
+    <button id="back-to-top" class="back-to-top btn-icon" aria-label="Back to Top" title="Back to Top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ====================================================================
+         14. MODULAR JAVASCRIPT BUNDLE
+         ==================================================================== -->
+    <script src="js/loader.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

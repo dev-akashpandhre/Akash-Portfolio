@@ -1,0 +1,144 @@
+/**
+ * ====================================================================
+ * AKASH PORTFOLIO — ANIMATIONS & KEYFRAMES (css/animations.css)
+ * ====================================================================
+ * High-performance GPU-accelerated scroll reveals, glowing pulses,
+ * subtle floating effects, and state transition animations.
+ */
+
+/* --------------------------------------------------------------------
+   1. SCROLL REVEAL UTILITY CLASSES
+   -------------------------------------------------------------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Directional entrance variants */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------
+   2. KEYFRAME DEFINITIONS
+   -------------------------------------------------------------------- */
+
+/* Subtle vertical floating motion for badges */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Pulsing ambient glow for the profile image border */
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: scale(1.03);
+    }
+}
+
+/* Subtle gradient wave effect */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Soft ripple effect on buttons */
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(99, 102, 241, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
+
+/* --------------------------------------------------------------------
+   3. APPLIED ANIMATIONS
+   -------------------------------------------------------------------- */
+.experience-badge {
+    animation: float 4s ease-in-out infinite;
+}
+
+.profile-glow {
+    animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.btn-primary:focus-visible {
+    animation: ripple 1.2s infinite;
+}
+
+/* Respect User Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal,
+    .slide-left,
+    .slide-right,
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

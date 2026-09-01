@@ -1,0 +1,50 @@
+/**
+ * ====================================================================
+ * AKASH PORTFOLIO — CUSTOM SCROLLBAR STYLES (css/scrollbar.css)
+ * ====================================================================
+ * WebKit and Firefox-compatible custom scrollbar matching the dark
+ * theme with an indigo/purple gradient thumb and subtle hover glow.
+ */
+
+/* --------------------------------------------------------------------
+   1. FIREFOX & STANDARD SPECIFICATION
+   -------------------------------------------------------------------- */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #6366f1 #0a0b14;
+}
+
+/* --------------------------------------------------------------------
+   2. WEBKIT BROWSERS (Chrome, Edge, Safari, Opera)
+   -------------------------------------------------------------------- */
+
+/* Scrollbar Track Container */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track Background */
+::-webkit-scrollbar-track {
+    background: #07080e;
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Scrollbar Draggable Thumb */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4f46e5 0%, #7c3aed 100%);
+    border-radius: 8px;
+    border: 2px solid #07080e;
+    transition: background 0.3s ease;
+}
+
+/* Thumb Hover State */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #6366f1 0%, #a855f7 100%);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+/* Scrollbar Corner (Intersection of horizontal and vertical scrollbars) */
+::-webkit-scrollbar-corner {
+    background: #07080e;
+}

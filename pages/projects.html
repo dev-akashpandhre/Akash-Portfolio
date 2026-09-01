@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Projects | Akash Pandhre — Developer Portfolio</title>
+    <meta name="description" content="Explore complete projects by Akash Pandhre: Python Data Analysis, Smart Expense Tracker, and SQL Assignments.">
+    <meta name="keywords" content="Akash Pandhre Projects, Python Projects, Data Analysis, SQL, Flask Web Application">
+    <meta name="author" content="Akash Pandhre">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <!-- ====================================================================
+         1. PRELOADER SCREEN
+         ==================================================================== -->
+    <div id="preloader" class="loader-wrapper" aria-busy="true" aria-label="Loading Projects">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">
+                <span class="loader-title">Akash Pandhre</span>
+                <span class="loader-subtitle">Loading Projects...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" class="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <!-- ====================================================================
+         2. HEADER & NAVIGATION BAR
+         ==================================================================== -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="../index.html" class="nav-logo" aria-label="Akash Pandhre Homepage">
+                <img src="../assets/images/logo.png" alt="" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">Akash<span>.</span></span>
+            </a>
+
+            <div id="nav-menu" class="nav-menu" role="menubar">
+                <a href="../index.html" class="nav-link" role="menuitem">Home</a>
+                <a href="../index.html#about" class="nav-link" role="menuitem">About</a>
+                <a href="../index.html#education" class="nav-link" role="menuitem">Education</a>
+                <a href="../index.html#skills" class="nav-link" role="menuitem">Skills</a>
+                <a href="projects.html" class="nav-link active" role="menuitem" aria-current="page">Projects</a>
+                <a href="certificates.html" class="nav-link" role="menuitem">Certificates</a>
+                <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle btn-icon" aria-label="Switch Theme" title="Switch Theme">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+
+                <a href="../assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline nav-resume-btn">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i> Resume
+                </a>
+
+                <button id="nav-toggle" class="nav-toggle btn-icon" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="page-content">
+        <!-- ====================================================================
+             3. PAGE HEADER BANNER
+             ==================================================================== -->
+        <section class="page-header-section">
+            <div class="container">
+                <div class="page-header-content reveal">
+                    <span class="section-subtitle">Portfolio Catalog</span>
+                    <h1 class="page-header-title">All Projects</h1>
+                    <p class="page-header-desc">
+                        A curated archive of academic work, data analysis notebooks, database assignments, and software applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             4. ALL PROJECTS GRID
+             ==================================================================== -->
+        <section class="section all-projects-section">
+            <div class="container">
+                <div id="all-projects-grid" class="projects-grid">
+                    <!-- Dynamic project cards rendered by js/script.js via data/projects.json -->
+                </div>
+
+                <div class="section-footer-cta reveal">
+                    <a href="../index.html#projects" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back to Homepage
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================================
+         5. FOOTER
+         ==================================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">Akash<span>.</span></span>
+                    <p class="footer-tagline">B.Sc. Computer Science Student & Developer Portfolio</p>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#skills">Skills</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="certificates.html">Certificates</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/akash-pandhre-032a87420/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:akashpandhre84@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Akash Pandhre. All rights reserved.</p>
+                <p class="footer-built">Designed & Built with HTML5, CSS3 & Vanilla JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="back-to-top btn-icon" aria-label="Back to Top" title="Back to Top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Modular JavaScript Bundle -->
+    <script src="../js/loader.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
