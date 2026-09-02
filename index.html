@@ -50,9 +50,7 @@
 </head>
 <body>
 
-    <!-- ====================================================================
-         1. PRELOADER SCREEN
-         ==================================================================== -->
+    <!-- Preloader Screen -->
     <div id="preloader" class="loader-wrapper" aria-busy="true" aria-label="Loading Akash's Portfolio">
         <div class="loader-content">
             <div class="loader-spinner"></div>
@@ -66,9 +64,7 @@
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress" class="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 
-    <!-- ====================================================================
-         2. HEADER & NAVIGATION BAR
-         ==================================================================== -->
+    <!-- Header & Navigation Bar -->
     <header class="header">
         <nav class="nav-container" aria-label="Main Navigation">
             <a href="#hero" class="nav-logo" aria-label="Akash Pandhre Homepage">
@@ -91,7 +87,8 @@
                     <i class="fas fa-sun" aria-hidden="true"></i>
                 </button>
 
-                <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline nav-resume-btn">
+                <!-- Connected to Interactive A4 Resume -->
+                <a href="pages/resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline nav-resume-btn">
                     <i class="fas fa-file-alt" aria-hidden="true"></i> Resume
                 </a>
 
@@ -105,9 +102,7 @@
     </header>
 
     <main id="main-content">
-        <!-- ====================================================================
-             3. HERO SECTION
-             ==================================================================== -->
+        <!-- Hero Section -->
         <section id="hero" class="hero-section" style="background-image: url('assets/images/hero-bg.jpg');">
             <canvas id="particles-canvas" class="particles-canvas"></canvas>
             <div class="hero-overlay"></div>
@@ -128,8 +123,9 @@
                         <a href="#projects" class="btn btn-primary">
                             <i class="fas fa-code" aria-hidden="true"></i> View Projects
                         </a>
-                        <a href="assets/resume/resume.pdf" download="Akash_Pandhre_Resume.pdf" class="btn btn-secondary">
-                            <i class="fas fa-download" aria-hidden="true"></i> Download Resume
+                        <!-- Connected to Interactive A4 Resume -->
+                        <a href="pages/resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fas fa-file-invoice" aria-hidden="true"></i> View Resume
                         </a>
                     </div>
 
@@ -162,9 +158,7 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             4. ABOUT ME SECTION
-             ==================================================================== -->
+        <!-- About Me Section -->
         <section id="about" class="section about-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -221,7 +215,8 @@
 
                         <div class="about-actions">
                             <a href="#contact" class="btn btn-primary">Let's Connect</a>
-                            <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <!-- Connected to Interactive A4 Resume -->
+                            <a href="pages/resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                                 <i class="fas fa-external-link-alt"></i> View Full Resume
                             </a>
                         </div>
@@ -230,9 +225,7 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             5. EDUCATION SECTION
-             ==================================================================== -->
+        <!-- Education Section -->
         <section id="education" class="section education-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -285,9 +278,7 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             6. SKILLS SECTION
-             ==================================================================== -->
+        <!-- Skills Section -->
         <section id="skills" class="section skills-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -301,9 +292,7 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             7. FEATURED PROJECTS SECTION
-             ==================================================================== -->
+        <!-- Featured Projects Section -->
         <section id="projects" class="section projects-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -323,9 +312,7 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             8. GITHUB PROFILE & REPOSITORIES SECTION
-             ==================================================================== -->
+        <!-- GitHub Activity Section -->
         <section id="github" class="section github-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -333,17 +320,13 @@
                     <h2 class="section-title">GitHub Activity</h2>
                 </div>
 
-                <div id="github-stats" class="github-stats-container reveal">
-                    <!-- Populated dynamically by js/github.js -->
-                </div>
+                <div id="github-stats" class="github-stats-container reveal"></div>
 
                 <div id="github-loader" class="github-loader" style="display: none;">
                     <i class="fas fa-spinner fa-spin"></i> Fetching latest GitHub repositories...
                 </div>
 
-                <div id="github-repos" class="github-repos-grid">
-                    <!-- Populated dynamically by js/github.js -->
-                </div>
+                <div id="github-repos" class="github-repos-grid"></div>
 
                 <div class="section-footer-cta reveal">
                     <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -353,9 +336,7 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             9. CERTIFICATES SECTION
-             ==================================================================== -->
+        <!-- Certificates Section -->
         <section id="certificates" class="section certificates-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -363,9 +344,7 @@
                     <h2 class="section-title">Certifications</h2>
                 </div>
 
-                <div id="certificates-grid" class="certificates-grid">
-                    <!-- Rendered dynamically by js/script.js via data/certificates.json -->
-                </div>
+                <div id="certificates-grid" class="certificates-grid"></div>
 
                 <div class="section-footer-cta reveal">
                     <a href="pages/certificates.html" class="btn btn-outline">
@@ -375,33 +354,30 @@
             </div>
         </section>
 
-        <!-- ====================================================================
-             10. RESUME DOWNLOAD SECTION
-             ==================================================================== -->
+        <!-- Resume Download Banner Section -->
         <section id="resume-section" class="section resume-section">
             <div class="container">
                 <div class="resume-banner glass-card reveal">
                     <div class="resume-banner-content">
                         <h2 class="resume-banner-title">Looking for my full resume?</h2>
                         <p class="resume-banner-text">
-                            Download a copy of my curriculum vitae detailing my academic journey, project implementations, technical skills, and coursework.
+                            Explore my interactive A4 resume detailing my academic milestones, technical stack, verified projects, and coursework.
                         </p>
                     </div>
                     <div class="resume-banner-actions">
-                        <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fas fa-eye"></i> View PDF
+                        <!-- Connected to Interactive A4 Resume -->
+                        <a href="pages/resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fas fa-file-invoice"></i> Open Interactive Resume
                         </a>
-                        <a href="assets/resume/resume.pdf" download="Akash_Pandhre_Resume.pdf" class="btn btn-primary">
-                            <i class="fas fa-download"></i> Download Resume
+                        <a href="assets/resume/resume.pdf" download="Akash_Pandhre_Resume.pdf" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download PDF
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ====================================================================
-             11. CONTACT SECTION
-             ==================================================================== -->
+        <!-- Contact Section -->
         <section id="contact" class="section contact-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -410,7 +386,6 @@
                 </div>
 
                 <div class="contact-grid">
-                    <!-- Contact Information Details -->
                     <div class="contact-info-wrap reveal">
                         <h3 class="contact-info-title">Let's talk about opportunities</h3>
                         <p class="contact-info-desc">
@@ -444,7 +419,6 @@
                         </div>
                     </div>
 
-                    <!-- Contact Form Card -->
                     <div class="contact-form-wrap glass-card reveal">
                         <form id="contact-form" class="contact-form" novalidate>
                             <div class="form-group">
@@ -479,9 +453,7 @@
         </section>
     </main>
 
-    <!-- ====================================================================
-         12. FOOTER
-         ==================================================================== -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-top">
@@ -496,6 +468,7 @@
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#education">Education</a>
+                    <a href="pages/resume.html" target="_blank" rel="noopener noreferrer">Resume</a>
                     <a href="#contact">Contact</a>
                 </div>
 
@@ -513,16 +486,12 @@
         </div>
     </footer>
 
-    <!-- ====================================================================
-         13. FLOATING BACK TO TOP BUTTON
-         ==================================================================== -->
+    <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top btn-icon" aria-label="Back to Top" title="Back to Top">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- ====================================================================
-         14. MODULAR JAVASCRIPT BUNDLE
-         ==================================================================== -->
+    <!-- Modular Scripts -->
     <script src="js/loader.js"></script>
     <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>

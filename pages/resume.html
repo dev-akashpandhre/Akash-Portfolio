@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Kailas Pandhre — Resume (A4)</title>
+    <meta name="description" content="Official single-page A4 resume of Akash Kailas Pandhre — B.Sc. Computer Science student, Python Developer, and Data Analyst.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Core Portfolio Stylesheets -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* =============================================================
+           1. PAGE & SCREEN CANVAS (A4 PROPORTIONED)
+           ============================================================= */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #06070d;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.16) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.14) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 60%);
+            background-attachment: fixed;
+            color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding: 2rem 1rem 3rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Top Action Bar */
+        .resume-action-bar {
+            width: 210mm;
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .action-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #cbd5e1;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 8px #10b981;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        /* =============================================================
+           2. EXACT A4 CANVAS ARCHITECTURE (210mm x 297mm)
+           ============================================================= */
+        .resume-a4-sheet {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            background: rgba(12, 16, 28, 0.88);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.85),
+                        0 0 30px rgba(99, 102, 241, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 68mm 142mm;
+        }
+
+        /* Top Neon Gradient Bar */
+        .resume-a4-sheet::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899, #06b6d4);
+            z-index: 10;
+        }
+
+        /* =============================================================
+           3. LEFT SIDEBAR (COMPACT 68mm)
+           ============================================================= */
+        .resume-sidebar {
+            background: rgba(8, 11, 20, 0.8);
+            border-right: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 16mm 5mm 14mm 6mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 4mm;
+        }
+
+        .profile-avatar-frame {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            padding: 2.5px;
+            background: linear-gradient(135deg, #6366f1, #a855f7, #06b6d4);
+            box-shadow: 0 8px 18px -4px rgba(99, 102, 241, 0.5);
+            margin-bottom: 2.5mm;
+        }
+
+        .profile-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            background: #0f172a;
+        }
+
+        .profile-info h2 {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-bottom: 1.5mm;
+        }
+
+        .profile-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #a855f7;
+            background: rgba(168, 85, 247, 0.12);
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            padding: 0.15rem 0.55rem;
+            border-radius: 12px;
+        }
+
+        /* Sidebar Section Titles */
+        .aside-title {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: #6366f1;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-bottom: 2mm;
+            padding-bottom: 1mm;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* Contact Details */
+        .contact-cluster {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8mm;
+            margin-bottom: 4mm;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.73rem;
+            color: #cbd5e1;
+            padding: 1.6mm 2.2mm;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+
+        .contact-item i {
+            font-size: 0.8rem;
+            color: #a855f7;
+            width: 14px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item a {
+            color: #cbd5e1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Skills Clusters */
+        .skill-group {
+            margin-bottom: 2.5mm;
+        }
+
+        .skill-group-name {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 1.2mm;
+            display: block;
+        }
+
+        .chip-rack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2mm;
+        }
+
+        .skill-chip {
+            font-size: 0.67rem;
+            font-weight: 600;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            background: rgba(99, 102, 241, 0.1);
+            color: #c7d2fe;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .skill-chip i {
+            font-size: 0.68rem;
+            color: #a855f7;
+        }
+
+        /* Personal Bio Metadata */
+        .bio-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4mm;
+            font-size: 0.71rem;
+            color: #94a3b8;
+        }
+
+        .bio-entry {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.8mm;
+        }
+
+        .bio-entry strong {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        /* =============================================================
+           4. RIGHT MAIN COLUMN (142mm)
+           ============================================================= */
+        .resume-main {
+            padding: 15mm 8mm 14mm 7mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* Header Title */
+        .main-hero-bar {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 2mm;
+            margin-bottom: 3.5mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .hero-title-wrap h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            line-height: 1.1;
+            margin-bottom: 1mm;
+            background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 75%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title-wrap p {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #a855f7;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .hero-tagline-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.67rem;
+            font-weight: 600;
+            padding: 0.15rem 0.55rem;
+            border-radius: 6px;
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            white-space: nowrap;
+        }
+
+        /* Section Headings */
+        .sec-head {
+            font-size: 0.83rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-bottom: 2.2mm;
+        }
+
+        .sec-head-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a855f7;
+            font-size: 0.72rem;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.04) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-left: 3px solid #6366f1;
+            border-radius: 8px;
+            padding: 2.2mm 3mm;
+            font-size: 0.76rem;
+            line-height: 1.5;
+            color: #cbd5e1;
+            margin-bottom: 3.5mm;
+        }
+
+        /* Projects Deck */
+        .projects-deck {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2mm;
+            margin-bottom: 3.5mm;
+        }
+
+        .proj-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 2.2mm 2.8mm;
+        }
+
+        .proj-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.8mm;
+        }
+
+        .proj-title {
+            font-size: 0.87rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .proj-status-pill {
+            font-size: 0.62rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            padding: 0.1rem 0.45rem;
+            border-radius: 10px;
+            background: rgba(168, 85, 247, 0.15);
+            color: #d8b4fe;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .proj-subline {
+            font-size: 0.68rem;
+            color: #94a3b8;
+            margin-bottom: 1.2mm;
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .proj-subline strong {
+            color: #cbd5e1;
+        }
+
+        .proj-bullet-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8mm;
+            margin-bottom: 1.4mm;
+        }
+
+        .proj-bullet-list li {
+            font-size: 0.72rem;
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 1rem;
+            line-height: 1.4;
+        }
+
+        .proj-bullet-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: 700;
+        }
+
+        .proj-tech-stack-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .tech-tag {
+            font-size: 0.63rem;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            color: #94a3b8;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Education Route */
+        .edu-route {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8mm;
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 3.5mm;
+        }
+
+        .edu-route::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 4px;
+            bottom: 4px;
+            width: 1.5px;
+            background: linear-gradient(180deg, #6366f1 0%, #a855f7 60%, rgba(255, 255, 255, 0.05) 100%);
+        }
+
+        .edu-step {
+            position: relative;
+        }
+
+        .edu-step-circle {
+            position: absolute;
+            left: -1.4rem;
+            top: 3px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #0a0b14;
+            border: 2px solid #6366f1;
+        }
+
+        .edu-step-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .edu-step-degree {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .edu-step-period {
+            font-size: 0.65rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: #a855f7;
+        }
+
+        .edu-step-inst {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edu-grade-pill {
+            font-size: 0.65rem;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 0.05rem 0.45rem;
+            border-radius: 10px;
+        }
+
+        /* Signoff */
+        .verif-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 2.2mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 0.68rem;
+            color: #94a3b8;
+        }
+
+        .verif-statement {
+            max-width: 320px;
+            line-height: 1.35;
+        }
+
+        .verif-sig-box {
+            text-align: right;
+        }
+
+        .verif-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ffffff;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1mm;
+            min-width: 140px;
+        }
+
+        /* =============================================================
+           5. EXACT PRINT-TO-PDF CALIBRATION (A4 SINGLE PAGE)
+           ============================================================= */
+        @page {
+            size: A4 portrait;
+            margin: 0; /* Prevents default browser headers, footers & margin overflow */
+        }
+
+        @media print {
+            html, body {
+                width: 210mm !important;
+                height: 297mm !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #ffffff !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                overflow: hidden !important;
+            }
+
+            .resume-action-bar {
+                display: none !important;
+            }
+
+            .resume-a4-sheet {
+                width: 210mm !important;
+                height: 297mm !important;
+                max-height: 297mm !important;
+                margin: 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                background: #ffffff !important;
+                grid-template-columns: 68mm 142mm !important;
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+                overflow: hidden !important;
+            }
+
+            .resume-a4-sheet::before {
+                display: none !important;
+            }
+
+            .resume-sidebar {
+                background: #f8fafc !important;
+                border-right: 1px solid #e2e8f0 !important;
+                padding: 14mm 5mm 12mm 6mm !important;
+            }
+
+            .resume-main {
+                background: #ffffff !important;
+                padding: 14mm 8mm 12mm 7mm !important;
+            }
+
+            .hero-title-wrap h1,
+            .profile-info h2,
+            .proj-title,
+            .edu-step-degree,
+            .verif-name {
+                color: #0f172a !important;
+                -webkit-text-fill-color: #0f172a !important;
+                background: none !important;
+            }
+
+            .hero-title-wrap p,
+            .profile-badge,
+            .edu-step-period {
+                color: #4f46e5 !important;
+            }
+
+            .aside-title,
+            .sec-head {
+                color: #3730a3 !important;
+                border-bottom-color: #cbd5e1 !important;
+            }
+
+            .sec-head-icon {
+                background: #e0e7ff !important;
+                color: #4338ca !important;
+            }
+
+            .contact-item,
+            .proj-card {
+                background: #f8fafc !important;
+                border: 1px solid #e2e8f0 !important;
+                color: #1e293b !important;
+            }
+
+            .contact-item i {
+                color: #4f46e5 !important;
+            }
+
+            .contact-item a,
+            .proj-bullet-list li,
+            .summary-box,
+            .edu-step-inst,
+            .bio-stack,
+            .verif-statement {
+                color: #334155 !important;
+            }
+
+            .summary-box {
+                background: #f1f5f9 !important;
+                border-left-color: #4f46e5 !important;
+            }
+
+            .skill-chip,
+            .proj-status-pill,
+            .tech-tag {
+                background: #eef2ff !important;
+                color: #3730a3 !important;
+                border-color: #c7d2fe !important;
+            }
+
+            .edu-route::before {
+                background: #cbd5e1 !important;
+            }
+
+            .edu-step-circle {
+                background: #ffffff !important;
+                border-color: #4f46e5 !important;
+            }
+
+            .verif-name {
+                border-top-color: #94a3b8 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Action Bar -->
+    <div class="resume-action-bar">
+        <div class="action-brand">
+            <span class="status-dot"></span>
+            <span>A4 Single-Page Calibrated</span>
+        </div>
+        <div class="action-buttons">
+            <a href="../index.html" class="btn btn-secondary btn-sm">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <button onclick="window.print()" class="btn btn-primary btn-sm">
+                <i class="fas fa-print"></i> Print / Save PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- Exact 210mm x 297mm A4 Canvas -->
+    <div class="resume-a4-sheet">
+        
+        <!-- =========================================================
+             LEFT SIDEBAR COLUMN (68mm)
+             ========================================================= -->
+        <aside class="resume-sidebar">
+            
+            <!-- Profile Identity -->
+            <div class="profile-card">
+                <div class="profile-avatar-frame">
+                    <img src="../assets/images/profile.png" alt="Akash Pandhre" class="profile-avatar-img" onerror="this.src='../assets/images/about.png'">
+                </div>
+                <div class="profile-info">
+                    <h2>Akash Pandhre</h2>
+                    <span class="profile-badge">Developer & Analyst</span>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h3 class="aside-title"><i class="fas fa-address-book"></i> Connect</h3>
+                <div class="contact-cluster">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:akashpandhre84@gmail.com">akashpandhre84@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 9921273859</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Parbhani, Maharashtra</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/dev-akashpandhre" target="_blank" rel="noopener noreferrer">dev-akashpandhre</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/akash-pandhre-032a87420/" target="_blank" rel="noopener noreferrer">in/akash-pandhre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills Matrix -->
+            <div>
+                <h3 class="aside-title"><i class="fas fa-layer-group"></i> Technical Stack</h3>
+                
+                <div class="skill-group">
+                    <span class="skill-group-name">Languages & Data</span>
+                    <div class="chip-rack">
+                        <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-chip"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-chip">NumPy</span>
+                        <span class="skill-chip">Pandas</span>
+                        <span class="skill-chip">Matplotlib</span>
+                        <span class="skill-chip">Seaborn</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <span class="skill-group-name">Web & Frameworks</span>
+                    <div class="chip-rack">
+                        <span class="skill-chip"><i class="fas fa-server"></i> Flask</span>
+                        <span class="skill-chip"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-chip"><i class="fab fa-js"></i> JS</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <span class="skill-group-name">Tools & Workflow</span>
+                    <div class="chip-rack">
+                        <span class="skill-chip"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-chip"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-chip"><i class="fas fa-laptop-code"></i> VS Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strengths -->
+            <div>
+                <h3 class="aside-title"><i class="fas fa-bolt"></i> Strengths</h3>
+                <div class="chip-rack">
+                    <span class="skill-chip">Problem Solving</span>
+                    <span class="skill-chip">Analytical Thinking</span>
+                    <span class="skill-chip">Team Coordination</span>
+                    <span class="skill-chip">Adaptability</span>
+                </div>
+            </div>
+
+            <!-- Personal Profile Data -->
+            <div>
+                <h3 class="aside-title"><i class="fas fa-id-card"></i> Personal Info</h3>
+                <div class="bio-stack">
+                    <div class="bio-entry">
+                        <span>DOB:</span>
+                        <strong>21/06/2005</strong>
+                    </div>
+                    <div class="bio-entry">
+                        <span>Blood Group:</span>
+                        <strong>A+</strong>
+                    </div>
+                    <div class="bio-entry">
+                        <span>Languages:</span>
+                        <strong>English, Marathi, Hindi</strong>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- =========================================================
+             RIGHT MAIN COLUMN (142mm)
+             ========================================================= -->
+        <main class="resume-main">
+            
+            <!-- Headline Header -->
+            <header class="main-hero-bar">
+                <div class="hero-title-wrap">
+                    <h1>Akash Kailas Pandhre</h1>
+                    <p><i class="fas fa-terminal"></i> B.Sc. Computer Science Graduate & Aspiring Developer</p>
+                </div>
+                <span class="hero-tagline-badge">Open to Roles</span>
+            </header>
+
+            <!-- Career Objective -->
+            <section>
+                <h3 class="sec-head">
+                    <span class="sec-head-icon"><i class="fas fa-bullseye"></i></span>
+                    Career Objective
+                </h3>
+                <div class="summary-box">
+                    Motivated and enthusiastic <strong>B.Sc. Computer Science final-year student</strong> seeking an opportunity to begin a professional career in the IT industry where I can apply my programming and problem-solving skills, learn modern technologies, contribute to real-world projects, and grow as a professional.
+                </div>
+            </section>
+
+            <!-- Projects Showcase -->
+            <section>
+                <h3 class="sec-head">
+                    <span class="sec-head-icon"><i class="fas fa-code-branch"></i></span>
+                    Technical Projects
+                </h3>
+                
+                <div class="projects-deck">
+                    <!-- Project 1: Smart Expense Tracker -->
+                    <article class="proj-card">
+                        <div class="proj-header">
+                            <h4 class="proj-title">Smart Expense Tracker</h4>
+                            <span class="proj-status-pill">Academic / TY Project</span>
+                        </div>
+                        <div class="proj-subline">
+                            <span>Role: <strong>Full-Stack Developer</strong></span>
+                            <span>Team: <strong>Dharasure Ramkrishna</strong></span>
+                        </div>
+                        <ul class="proj-bullet-list">
+                            <li>Web application designed to record, manage, categorize, and monitor daily expenses and personal income.</li>
+                            <li>Engineered user authentication, interactive expense management dashboards, and visual reports.</li>
+                            <li>Structured relational SQL schemas for fast transactional log storage and monthly budget calculations.</li>
+                        </ul>
+                        <div class="proj-tech-stack-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Student Performance Analysis -->
+                    <article class="proj-card">
+                        <div class="proj-header">
+                            <h4 class="proj-title">Student Performance Analysis Using Python</h4>
+                            <span class="proj-status-pill">Data Analytics</span>
+                        </div>
+                        <div class="proj-subline">
+                            <span>Domain: <strong>Exploratory Data Analysis (EDA)</strong></span>
+                            <span>Repo: <strong>dev-akashpandhre</strong></span>
+                        </div>
+                        <ul class="proj-bullet-list">
+                            <li>Explored academic performance indicators and score distributions using NumPy and Pandas.</li>
+                            <li>Created correlation heatmaps and score breakdown visualizations using Matplotlib and Seaborn.</li>
+                            <li>Derived quantitative factors influencing student test scores and preparation levels.</li>
+                        </ul>
+                        <div class="proj-tech-stack-row">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Seaborn</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Education Timeline -->
+            <section>
+                <h3 class="sec-head">
+                    <span class="sec-head-icon"><i class="fas fa-graduation-cap"></i></span>
+                    Education & Credentials
+                </h3>
+                
+                <div class="edu-route">
+                    <!-- B.Sc. CS -->
+                    <div class="edu-step">
+                        <div class="edu-step-circle"></div>
+                        <div class="edu-step-top">
+                            <h4 class="edu-step-degree">B.Sc. Computer Science — Final Year</h4>
+                            <span class="edu-step-period">2026 – Present</span>
+                        </div>
+                        <div class="edu-step-inst">
+                            <span>Swami Ramanand Tirth Marathwada University (SRTMUN), Nanded</span>
+                            <span class="edu-grade-pill">Pursuing</span>
+                        </div>
+                    </div>
+
+                    <!-- HSC -->
+                    <div class="edu-step">
+                        <div class="edu-step-circle"></div>
+                        <div class="edu-step-top">
+                            <h4 class="edu-step-degree">Higher Secondary Certificate (HSC)</h4>
+                            <span class="edu-step-period">2023 – 2024</span>
+                        </div>
+                        <div class="edu-step-inst">
+                            <span>Swami Vivekanand Junior College, Chatori</span>
+                            <span class="edu-grade-pill">73.00%</span>
+                        </div>
+                    </div>
+
+                    <!-- SSC -->
+                    <div class="edu-step">
+                        <div class="edu-step-circle"></div>
+                        <div class="edu-step-top">
+                            <h4 class="edu-step-degree">Secondary School Certificate (SSC)</h4>
+                            <span class="edu-step-period">2020 – 2021</span>
+                        </div>
+                        <div class="edu-step-inst">
+                            <span>L.K.R.R Prince English School, Selu</span>
+                            <span class="edu-grade-pill">75.40%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formal Digital Signoff -->
+            <footer class="verif-footer">
+                <div class="verif-statement">
+                    I hereby declare that the particulars given above are authentic and accurate to the best of my knowledge and belief.<br>
+                    <strong>Place:</strong> Parbhani, Maharashtra &nbsp;|&nbsp; <strong>Date:</strong> 02/09/2026
+                </div>
+                <div class="verif-sig-box">
+                    <div class="verif-name">Akash Kailas Pandhre</div>
+                </div>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
