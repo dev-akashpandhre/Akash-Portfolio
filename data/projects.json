@@ -16,7 +16,7 @@
     "description": "A smart web-based application designed to help users record, manage, categorize, and monitor daily expenses and income with authentication, budgets, dashboards, and financial reports.",
     "technologies": ["Python", "Flask", "HTML", "CSS", "JavaScript", "SQL"],
     "image": "assets/images/projects/github-project.png",
-    "github": "https://github.com/dev-akashpandhre",
+    "github": "https://github.com/dev-akashpandhre/Smart-Expense-Tracker",
     "demo": "",
     "featured": true,
     "category": "Web Development"
